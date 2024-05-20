@@ -1,0 +1,44 @@
+#Polymorphism in Built-in functions len()
+employeename =['Jason','Marco','Mitchell','Lucifer']
+companyname = 'Microsoft'
+employeeid = [{1:100,2:200}]
+print(len(employeename))
+print(len(companyname))
+print(len(employeeid))
+print('----------------------------------------------------------')
+
+#Polymorphism with inheritance (Method Overriding)
+class Vehicle:
+    def __init__(self,name,color,price):
+        self.name = name
+        self.color =color
+        self.price =price
+
+    def show(self):
+        print('Details:', self.name,self.color,self.price)
+
+    def max_speed(self):
+        print('Vehicle max speed is 200')
+
+    def change_gear(self):
+        print('Vehicle change 5 gear')
+
+#inherit from Vehicle class
+class Car(Vehicle):
+    def max_speed(self):
+        print('Vehicle max speed is 250')
+
+    def change_gear(self):
+        print('Vehicle change 6 gear')
+
+#car object
+car =Car('BMW','Blue',700000)
+car.show()
+car.max_speed()
+car.change_gear()
+print('--------------------------------------------------------------')
+#vehicle object
+vehicle = Vehicle('Truck','Red',100000)
+vehicle.show()
+vehicle.max_speed()
+vehicle.change_gear()
